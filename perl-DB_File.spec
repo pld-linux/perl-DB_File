@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl DB_File
 Summary(zh_CN):	DB_File Perl дё©И
 Name:		perl-DB_File
 Version:	1.804
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -45,8 +45,12 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_mandir}/man3
+
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+pod2man --section 3pm DB_File.pm >$RPM_BUILD_ROOT%{_mandir}/man3/DB_File.3pm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,6 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_archlib}/DB_File.pm
 %dir %{perl_archlib}/auto/DB_File
-%{perl_archlib}/auto/DB_File/autosplit.ix
 %{perl_archlib}/auto/DB_File/DB_File.bs
 %attr(755,root,root) %{perl_archlib}/auto/DB_File/DB_File.so
+%{_mandir}/man3/*
