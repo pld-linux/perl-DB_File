@@ -9,6 +9,7 @@ Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+# Source0-md5:	306033319ec016cbec2ff4f3238f3566
 Patch0:		%{name}-rpm-automation.patch
 BuildRequires:	db-devel
 BuildRequires:	perl-devel >= 5.6
