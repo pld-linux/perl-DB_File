@@ -5,7 +5,7 @@ Summary:	DB_File allows to manage a simple ASCII database.
 Summary(pl):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych.
 Name:		perl-DB_File
 Version:	1.805
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -18,8 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 DB_File is a module which allows Perl programs to make use of the
 facilities provided by Berkeley DB version 1.
 
-# %description -l pl
-# TODO
+%description -l pl
+DB_File jest modu³em, który pozwala programom w Perlu na korzystanie
+z udogodnieñ, dostarczanych przez Berkeley DB w wersji 1.
 
 %prep
 %setup -q -n %{pnam}-%{version}
