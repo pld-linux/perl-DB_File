@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DB_File
-%define	pnam	DB_File
+%define		pdir	DB_File
+%define		pnam	DB_File
 Summary:	DB_File allows to manage a simple ASCII database
 Summary(pl):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
