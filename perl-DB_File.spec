@@ -44,4 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_archlib}/DB_File.pm
 %{perl_archlib}/perllocal.pod
 %dir %{perl_archlib}/auto/DB_File
-%{perl_archlib}/auto/DB_File/*
+%{perl_archlib}/auto/DB_File/autosplit.ix
+%{perl_archlib}/auto/DB_File/DB_File.bs
+%attr(755,root,root) %{perl_archlib}/auto/DB_File/DB_File.so
