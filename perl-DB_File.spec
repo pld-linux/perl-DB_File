@@ -10,6 +10,7 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-rpm-automation.patch
+BuildRequires:	db-devel
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,11 +34,9 @@ z udogodnieñ, dostarczanych przez Berkeley DB w wersji 1.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-#install -d $RPM_BUILD_ROOT%{_mandir}/man3
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-#pod2man --section 3pm DB_File.pm >$RPM_BUILD_ROOT%{_mandir}/man3/DB_File.3pm
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
