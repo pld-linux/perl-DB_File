@@ -1,0 +1,25 @@
+diff -urN DB_File-1.79.orig/DB_File.pm DB_File-1.79/DB_File.pm
+--- DB_File-1.79.orig/DB_File.pm	Fri Oct 26 00:32:03 2001
++++ DB_File-1.79/DB_File.pm	Mon Mar  4 07:43:55 2002
+@@ -11,8 +11,6 @@
+ 
+ package DB_File::HASHINFO ;
+ 
+-require 5.00404;
+-
+ use warnings;
+ use strict;
+ use Carp;
+diff -urN DB_File-1.79.orig/Makefile.PL DB_File-1.79/Makefile.PL
+--- DB_File-1.79.orig/Makefile.PL	Fri Oct 26 00:31:56 2001
++++ DB_File-1.79/Makefile.PL	Mon Mar  4 07:43:42 2002
+@@ -4,9 +4,6 @@
+ use ExtUtils::MakeMaker 5.16 ;
+ use Config ;
+ 
+-die "DB_File needs Perl 5.004_05 or better. This is $]\n" 
+-    if $] <= 5.00404; 
+-
+ my $VER_INFO ;
+ my $LIB_DIR ;
+ my $INC_DIR ;
