@@ -28,6 +28,7 @@ z udogodnieñ, dostarczanych przez Berkeley DB w wersji 1.
 %patch0 -p1
 
 %build
+%{__perl} -pi -e "s/INSTALLDIRS => 'perl',//" Makefile.PL
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor 
 %{__make}
@@ -44,9 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_archlib}/DB_File.pm
-%dir %{perl_archlib}/auto/DB_File
-%{perl_archlib}/auto/DB_File/DB_File.bs
-%{perl_archlib}/auto/DB_File/autosplit.ix
-%attr(755,root,root) %{perl_archlib}/auto/DB_File/DB_File.so
+%{perl_vendorarch}/DB_File.pm
+%dir %{perl_vendorarch}/auto/DB_File
+%{perl_vendorarch}/auto/DB_File/DB_File.bs
+%{perl_vendorarch}/auto/DB_File/autosplit.ix
+%attr(755,root,root) %{perl_vendorarch}/auto/DB_File/DB_File.so
 %{_mandir}/man3/*
