@@ -2,8 +2,8 @@
 Summary:	DB_File perl module
 Summary(pl):	Modu³ perla DB_File
 Name:		perl-DB_File
-Version:	1.76
-Release:	2
+Version:	1.77
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
