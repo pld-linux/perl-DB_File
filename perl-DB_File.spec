@@ -31,7 +31,7 @@ z udogodnieñ, dostarczanych przez Berkeley DB w wersji 1.
 %build
 %{__perl} -pi -e "s/INSTALLDIRS => 'perl',//" Makefile.PL
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
