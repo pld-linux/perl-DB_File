@@ -1,0 +1,2 @@
+- fixed permission on shared objects,
+- removed %%{perl_archlib}/perllocal.pod (seems nothing important).
