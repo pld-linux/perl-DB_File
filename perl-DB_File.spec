@@ -6,7 +6,7 @@ Version:	1.79
 Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/DB_File/DB_File-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/DB_File/DB_File-%{version}.tar.gz
 Patch0:		%{name}-rpm-automation.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
