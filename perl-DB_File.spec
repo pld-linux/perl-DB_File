@@ -27,7 +27,7 @@ z udogodnieñ, dostarczanych przez Berkeley DB w wersji 1.
 %patch0 -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %install
