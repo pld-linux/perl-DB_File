@@ -5,13 +5,13 @@ Summary:	DB_File allows to manage a simple ASCII database
 Summary(pl):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
 Version:	1.806
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-rpm-automation.patch
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,7 +27,8 @@ z udogodnieñ, dostarczanych przez Berkeley DB w wersji 1.
 %patch0 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
