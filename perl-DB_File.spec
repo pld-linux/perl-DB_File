@@ -8,8 +8,8 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/DB_File/DB_File-%{version}.tar.gz
 Patch0:		%{name}-rpm-automation.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,14 +31,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %{perl_archlib}/DB_File.pm
 %dir %{perl_archlib}/auto/DB_File
 %{perl_archlib}/auto/DB_File/autosplit.ix
