@@ -40,7 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %{perl_archlib}/DB_File.pm
-%{perl_archlib}/perllocal.pod
 %dir %{perl_archlib}/auto/DB_File
 %{perl_archlib}/auto/DB_File/autosplit.ix
 %{perl_archlib}/auto/DB_File/DB_File.bs
