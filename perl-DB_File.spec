@@ -1,18 +1,22 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DB_File
 %define	pnam	DB_File
 Summary:	DB_File allows to manage a simple ASCII database
 Summary(pl):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
-Version:	1.806
-Release:	3
+Version:	1.807
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	306033319ec016cbec2ff4f3238f3566
+# Source0-md5:	a60bbc5372e5d80517451ba5ac217066
 Patch0:		%{name}-rpm-automation.patch
 BuildRequires:	db-devel
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +36,10 @@ z udogodnieñ, dostarczanych przez Berkeley DB w wersji 1.
 %{__perl} -pi -e "s/INSTALLDIRS => 'perl',//" Makefile.PL
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make}
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
