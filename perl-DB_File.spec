@@ -3,10 +3,11 @@ Summary:	DB_File perl module
 Summary(pl):	Modu³ perla DB_File
 Name:		perl-DB_File
 Version:	1.79
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/DB_File/DB_File-%{version}.tar.gz
+Patch0:		%{name}-rpm-automation.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,6 +20,7 @@ DB_File pozwala na korzystanie z prostej, tekstowej bazy danych.
 
 %prep
 %setup -q -n DB_File-%{version}
+%patch0 -p1
 
 %build
 perl Makefile.PL
