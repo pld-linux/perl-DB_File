@@ -2,8 +2,8 @@
 Summary:	DB_File perl module
 Summary(pl):	Modu³ perla DB_File
 Name:		perl-DB_File
-Version:	1.79
-Release:	2
+Version:	1.803
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/DB_File/DB_File-%{version}.tar.gz
