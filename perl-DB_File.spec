@@ -6,7 +6,7 @@
 %define		pdir	DB_File
 %define		pnam	DB_File
 Summary:	DB_File allows to manage a simple ASCII database
-Summary(pl):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
+Summary(pl.UTF-8):   DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
 Version:	1.814
 Release:	2
@@ -25,9 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 DB_File is a module which allows Perl programs to make use of the
 facilities provided by Berkeley DB version 1.
 
-%description -l pl
-DB_File jest modu≥em, ktÛry pozwala programom w Perlu na korzystanie
-z udogodnieÒ, dostarczanych przez Berkeley DB w wersji 1.
+%description -l pl.UTF-8
+DB_File jest modu≈Çem, kt√≥ry pozwala programom w Perlu na korzystanie
+z udogodnie≈Ñ, dostarczanych przez Berkeley DB w wersji 1.
 
 %prep
 %setup -q -n %{pnam}-%{version}
