@@ -6,7 +6,7 @@
 %define		pdir	DB_File
 %define		pnam	DB_File
 Summary:	DB_File allows to manage a simple ASCII database
-Summary(pl.UTF-8):   DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
+Summary(pl.UTF-8):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
 Version:	1.814
 Release:	2
