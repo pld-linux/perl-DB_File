@@ -13,9 +13,10 @@ Release:	2
 # same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DB_File/%{pnam}-%{version}.tar.gz
 # Source0-md5:	5ae102fe172f2aaf771a8d9cae23ca3a
 Patch0:		%{name}-rpm-automation.patch
+URL:		http://search.cpan.org/dist/DB_File/
 BuildRequires:	db-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -27,7 +28,7 @@ facilities provided by Berkeley DB version 1.
 
 %description -l pl.UTF-8
 DB_File jest modułem, który pozwala programom w Perlu na korzystanie
-z udogodnień, dostarczanych przez Berkeley DB w wersji 1.
+z udogodnień dostarczanych przez Berkeley DB w wersji 1.
 
 %prep
 %setup -q -n %{pnam}-%{version}
