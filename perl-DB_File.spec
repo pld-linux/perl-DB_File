@@ -39,6 +39,7 @@ z udogodnień dostarczanych przez Berkeley DB w wersji 1.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
