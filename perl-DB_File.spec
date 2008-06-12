@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%define	db_ver	%(rpm -q --what-provides --qf '%%{epoch}:%%{version}' db-devel)
+%define	db_ver	%(rpm -q --whatprovides --qf '%%{epoch}:%%{version}' db-devel)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DB_File
