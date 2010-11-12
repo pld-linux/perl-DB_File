@@ -11,7 +11,7 @@ Summary:	DB_File allows to manage a simple ASCII database
 Summary(pl.UTF-8):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
 Version:	1.820
-Release:	3
+Release:	4
 # same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
