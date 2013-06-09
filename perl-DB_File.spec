@@ -10,13 +10,13 @@
 Summary:	DB_File allows to manage a simple ASCII database
 Summary(pl.UTF-8):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
-Version:	1.826
-Release:	5
+Version:	1.828
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DB_File/%{pnam}-%{version}.tar.gz
-# Source0-md5:	4bc334674903b799ccf15e5ae042a40b
+# Source0-md5:	519c2056754a3b1897c6d8b3bc82d6f5
 Patch0:		%{name}-rpm-automation.patch
 URL:		http://search.cpan.org/dist/DB_File/
 BuildRequires:	db-devel
