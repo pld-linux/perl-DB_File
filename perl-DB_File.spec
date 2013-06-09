@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%define	db_ver	%(rpm -q --whatprovides --qf '%%{epoch}:%%{version}' db-devel)
+%define	db_ver	%(rpm -q --whatprovides --qf '%%|E?{%%{E}:}|%%{V}' db-devel)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DB_File
@@ -11,7 +11,7 @@ Summary:	DB_File allows to manage a simple ASCII database
 Summary(pl.UTF-8):	DB_File pozwala na korzystanie z prostej, tekstowej bazy danych
 Name:		perl-DB_File
 Version:	1.826
-Release:	4
+Release:	5
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
