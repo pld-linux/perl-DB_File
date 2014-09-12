@@ -61,7 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/DB_File.pm
 %dir %{perl_vendorarch}/auto/DB_File
-%{perl_vendorarch}/auto/DB_File/DB_File.bs
 %{perl_vendorarch}/auto/DB_File/autosplit.ix
 %attr(755,root,root) %{perl_vendorarch}/auto/DB_File/DB_File.so
 %{_mandir}/man3/DB_File.3pm*
