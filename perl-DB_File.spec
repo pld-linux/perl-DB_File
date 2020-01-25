@@ -4,7 +4,6 @@
 #
 %define	db_ver	%(rpm -q --whatprovides --qf '%%|E?{%%{E}:}|%%{V}' db-devel)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	DB_File
 %define		pnam	DB_File
 Summary:	DB_File allows to manage a simple ASCII database
