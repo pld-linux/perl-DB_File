@@ -34,7 +34,7 @@ z udogodnień dostarczanych przez Berkeley DB w wersji 1.
 
 %prep
 %setup -q -n %{pnam}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__perl} -pi -e "s/INSTALLDIRS => 'perl',//" Makefile.PL
