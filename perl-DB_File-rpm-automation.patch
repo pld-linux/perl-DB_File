@@ -1,22 +1,11 @@
---- a/DB_File.pm~	2016-12-29 15:21:35.000000000 +0100
-+++ a/DB_File.pm	2017-05-19 15:01:36.108010888 +0200
-@@ -9,8 +9,6 @@
- 
- package DB_File::HASHINFO ;
- 
--require 5.008003;
--
- use warnings;
- use strict;
- use Carp;
---- a/Makefile.PL~	2016-12-29 12:40:29.000000000 +0100
-+++ a/Makefile.PL	2017-05-19 15:01:44.825108380 +0200
-@@ -4,9 +4,6 @@
+--- DB_File-1.859/Makefile.PL~	2021-06-22 09:38:42.000000000 +0200
++++ DB_File-1.859/Makefile.PL	2026-01-03 20:07:02.967176397 +0100
+@@ -4,9 +4,6 @@ use strict ;
  use ExtUtils::MakeMaker 5.16 ;
  use Config ;
  
--die "DB_File needs Perl 5.8.3 or better. This is $]\n" 
--    if $] < 5.008003; 
+-die "DB_File needs Perl 5.8.3 or better. This is $]\n"
+-    if $] < 5.008003;
 -
  my $VER_INFO ;
  my $LIB_DIR ;
