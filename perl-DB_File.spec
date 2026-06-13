@@ -19,6 +19,7 @@ Source0:	https://www.cpan.org/authors/id/P/PM/PMQS/DB_File-%{version}.tar.gz
 Patch0:		%{name}-rpm-automation.patch
 URL:		https://search.cpan.org/dist/DB_File/
 BuildRequires:	db-devel
+BuildRequires:	perl-ExtUtils-MakeMaker >= 5.16
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	db = %{db_ver}
@@ -63,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/DB_File.pm
 %dir %{perl_vendorarch}/auto/DB_File
-%attr(755,root,root) %{perl_vendorarch}/auto/DB_File/DB_File.so
+%{perl_vendorarch}/auto/DB_File/DB_File.so
 %{_mandir}/man3/DB_File.3pm*
